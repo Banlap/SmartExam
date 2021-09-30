@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.banlap.smartexam.uivm.LoginVM" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_gradient"
+        tools:context=".ui.LoginActivity">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.85"
+            app:layout_constraintHeight_percent="0.80"
+            android:background="@drawable/shape_button_white2">
+
+            <RelativeLayout
+                android:id="@+id/rl_vcom"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rl_tcp_connect"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_below="@+id/rl_vcom"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/tv_vcom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_knx"
+                    android:text="@string/tv_vcom_smart"
+                    android:textSize="27dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_knx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_tcp_connect"
+                    android:text="@string/tv_knx_version"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/tv_tcp_connect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintStart_toStartOf="@+id/et_tcp_connect"
+                    app:layout_constraintBottom_toTopOf="@+id/et_tcp_connect"
+                    android:text="@string/tv_tcp_connect"
+                    android:textSize="17dp" />
+
+                <EditText
+                    android:id="@+id/et_tcp_connect"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/shape_button_gray_f6"
+                    android:text="192.168.180.30"
+                    android:hint="@string/et_tcp_hit"
+                    android:digits="@string/rule_ip"
+                    android:inputType="numberDecimal"
+                    android:maxLength="15"
+                    app:layout_constraintStart_toStartOf="@+id/tv_tcp_port"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_tcp_port" />
+
+                <TextView
+                    android:id="@+id/tv_tcp_port"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintStart_toStartOf="@+id/et_port"
+                    app:layout_constraintBottom_toTopOf="@+id/et_port"
+                    android:text="@string/tv_port"
+                    android:textSize="17dp" />
+
+                <EditText
+                    android:id="@+id/et_port"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="1000"
+                    android:hint="@string/et_port_hit"
+                    android:digits="@string/rule_port"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:background="@drawable/shape_button_gray_f6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_client_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="@+id/et_port"
+                    app:layout_constraintTop_toBottomOf="@+id/et_port"
+                    android:text="@string/tv_client_id"
+                    android:textSize="17dp" />
+
+                <EditText
+                    android:id="@+id/et_client_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_button_gray_f6"
+                    android:hint="@string/et_client_id_hit"
+                    android:inputType="text"
+                    android:maxLength="17"
+                    android:text="7E:D5:FC:DF:FF:FF"
+                    app:layout_constraintStart_toStartOf="@+id/tv_client_id"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_client_id" />
+
+                <TextView
+                    android:visibility="visible"
+                    android:onClick="@{()->vm.viewConnect()}"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/tv_connect"
+                    android:layout_width="120dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/tv_connect"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/selector_button_green"
+                    app:layout_constraintStart_toStartOf="@+id/et_client_id"
+                    app:layout_constraintEnd_toEndOf="@+id/et_client_id"
+                    app:layout_constraintTop_toBottomOf="@+id/et_client_id"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintVertical_bias="0.15"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/rl_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/white_alpha_1">
+
+            <LinearLayout
+                android:layout_width="125dp"
+                android:layout_height="96dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/shape_item_offline">
+
+                <ProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="loading..." />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

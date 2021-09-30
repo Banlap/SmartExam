@@ -1,0 +1,70 @@
+<resources>
+    <string name="rule_ip">1234567890.</string>
+    <string name="rule_port">1234567890</string>
+    <string name="rule_group_ip">123456789</string>
+    <string name="rule_client_id">1234567890:abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+
+    <string name="et_port_hit">Please enter the port</string>
+    <string name="et_tcp_hit">Please enter the IP</string>
+    <string name="et_client_id_hit">Please enter the client ID</string>
+
+    <string name="app_name">SmartExam</string>
+    <string name="tv_connect">Connect</string>
+    <string name="tv_port">Port</string>
+    <string name="tv_tcp_connect">Tcp Connect</string>
+    <string name="tv_client_id">Client ID</string>
+    <string name="tv_vcom_smart">Vcom Smart</string>
+    <string name="tv_knx_version">KNX_Version</string>
+
+    <string name="tv_top_title_main">Main</string>
+    <string name="tv_top_title_scene">Scene</string>
+    <string name="tv_top_title_device_enable">Enable/Disable</string>
+    <string name="tv_top_title_device_status">Device Status</string>
+    <string name="tv_top_title_user">User</string>
+    <string name="tv_top_title_help_center">Help Center</string>
+
+    <string name="tv_title_actuators">Actuators series</string>
+    <string name="tv_title_sensor">Sensor</string>
+    <string name="tv_title_scene_config">Scene Config</string>
+    <string name="tv_title_group_ip">Group IP</string>
+    <string name="tv_title_group_address">Group Address</string>
+    <string name="tv_tittle_device_setting">Device Setting</string>
+    <string name="tv_tittle_help_doc">Help Document</string>
+
+    <string name="tv_config">Config</string>
+    <string name="tv_1_10v">1–10V Dimming Actuators</string>
+    <string name="tv_4_way">4–Way Dimming Actuators</string>
+    <string name="tv_mac">Mac:</string>
+    <string name="tv_scene">Scene</string>
+    <string name="tv_add_scene">Add Scene</string>
+    <string name="tv_scene_name">Scene Name</string>
+    <string name="tv_confirm">Confirm</string>
+    <string name="tv_cancel">Cancel</string>
+    <string name="tv_add_group_address">Add Group Address</string>
+    <string name="tv_add_group_ip">Add Group IP</string>
+    <string name="tv_group_ip">Group IP</string>
+    <string name="tv_select_function">Select Function</string>
+    <string name="tv_select_ip">Select IP</string>
+    <string name="tv_select_address">Select Address</string>
+    <string name="tv_way_name">Way Name</string>
+    <string name="tv_function_name">Function Name</string>
+    <string name="tv_function_value">Function Value</string>
+    <string name="tv_on">ON</string>
+    <string name="tv_off">OFF</string>
+    <string name="tv_brightness_value">20%</string>
+    <string name="tv_value">value</string>
+    <string name="tv_add">Add</string>
+    <string name="tv_device">Device</string>
+    <string name="tv_enable_disable">Enable/Disable Function</string>
+    <string name="tv_client_id_">Client ID:</string>
+    <string name="tv_port_">Port:</string>
+    <string name="tv_tcp_connect_">Tcp Connect:</string>
+    <string name="tv_connect_info">Connect Info</string>
+    <string name="tv_device_mac_">Device Mac:</string>
+
+    <string name="tv_help_question_1_title">1. About Login</string>
+    <string name="tv_help_question_1">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</string>
+    <string name="tv_help_question_2_title">2. About Group Address</string>
+    <string name="tv_help_question_2">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</string>
+
+</resources>

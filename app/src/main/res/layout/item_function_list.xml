@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/rl_group_ip"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shape_button_white"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/ll_select"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_select"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_check_not" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_action_function"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_action_function"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center|start"
+                    android:text="@string/tv_function_name"
+                    android:textSize="14dp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_function"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:gravity="end"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/ll_brightness_function"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical|end"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/tv_value"
+                            android:layout_width="55dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_button_gray_f6"
+                            android:text="@string/tv_on"
+                            android:gravity="center"
+                            android:textSize="12dp" />
+
+                        <Switch
+                            android:visibility="gone"
+                            android:id="@+id/sw_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true" />
+
+                        <SeekBar
+                            android:visibility="visible"
+                            android:id="@+id/sb_brightness"
+                            android:layout_width="95dp"
+                            android:layout_height="match_parent"
+                            android:max="97"
+                            android:progress="17"
+                            android:progressDrawable="@drawable/layer_list_progress"
+                            android:thumb="@drawable/shape_progress_button" />
+
+                        <Spinner
+                            android:visibility="gone"
+                            android:id="@+id/sp_control"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/rl_disable_function"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/shape_button_black_alpha"
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_state_function"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="0.1"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/tv_state_function"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/tv_function_name"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_function"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_group_ip"
+            android:layout_alignStart="@+id/rl_group_ip"
+            android:layout_alignEnd="@+id/rl_group_ip"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shape_button_white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ic_group_ip" />
+
+            <TextView
+                android:id="@+id/tv_group_ip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:text="@string/tv_group_ip"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:id="@+id/iv_delete"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ic_cancel"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_disable_item"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shape_button_black_alpha"
+            />
+
+    </RelativeLayout>
+
+</layout>

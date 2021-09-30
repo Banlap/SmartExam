@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item>
+        <shape>
+            <solid android:color="@color/white" />
+            <corners android:radius="5dip" />
+        </shape>
+    </item>
+
+    <item
+        android:width="20dp"
+        android:height="20dp"
+        android:end="10dp"
+        android:drawable="@drawable/ic_arrow_down"
+        android:gravity="end|center_vertical"/>
+
+
+
+</layer-list>

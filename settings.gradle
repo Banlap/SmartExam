@@ -1,0 +1,4 @@
+include ':gateway-release'
+include ':gateway-release'
+include ':app'
+rootProject.name = "SmartExam"

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Warning"
+                android:textColor="@color/black"
+                android:textSize="24dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:id="@+id/ll_add_scene"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Remove this address?"
+                    android:textSize="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/tv_confirm"
+                    android:visibility="visible"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="@string/tv_confirm"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:background="@drawable/selector_button_green"/>
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/tv_cancel"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/tv_cancel"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/selector_button_gray"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

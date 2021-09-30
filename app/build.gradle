@@ -1,0 +1,89 @@
+import java.text.SimpleDateFormat
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    buildFeatures.dataBinding = true
+
+    defaultConfig {
+        applicationId "com.banlap.smartexam"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        //versionName "1.0"
+        //1.完成控制knx对应的设备、添加场景功能、查询设备状态功能、允许或禁用对应的功能、添加群组地址功能
+        //2.更新mqttId参数按设备型号显示、增加查询功能状态时选择群组地址判断类型
+        //versionName "1.1"
+        //1.划分查询设备状态和允许或禁用功能、重新调整查询设备状态界面、添加四路设备对应的功能
+        //2.添加退出功能、显示对应的连接信息
+        versionName "1.2"
+        //1.修复点击状态界面显示数据出错问题、修正在场景中选中群组地址点击选中功能 默认不保存上次选择功能
+        //2.修正在场景中选中群组地址点击选中开关功能有异常错误、去掉主页的点击连接图标功能
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                def df = new SimpleDateFormat("yyyy-MM-dd_HH-mm")
+                outputFileName = "SmartExam_v${defaultConfig.versionName}_${df.format(new Date())}.apk"
+            }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.google.android.material:material:1.2.1'
+
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    /*eventBus3事件订阅*/
+    implementation 'org.greenrobot:eventbus:3.2.0'
+
+    /*okHttp 网络框架*/
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+
+    /*retrofit2 网络框架*/
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    /*rxJava 异步处理*/
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+
+    /*mqtt库*/
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5'
+    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+
+}

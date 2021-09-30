@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.banlap.smartexam.fvm.UserFVM" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.MainActivity">
+
+        <RelativeLayout
+            android:id="@+id/rl_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_main_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent=".08"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rl_title_bar">
+
+            <LinearLayout
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true">
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/tv_top_title_help_center"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:background="@color/background_color_F2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rl_main_title">
+            
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rl_log"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHeight_percent="0.3"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_log"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:text="Log"
+                    android:textColor="@color/black"/>
+
+                <ScrollView
+                    android:id="@+id/sv_log"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_below="@+id/tv_log"
+                    android:background="@drawable/shape_item_online">
+
+                    <TextView
+                        android:id="@+id/tv_log_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Subscribe"/>
+
+                </ScrollView>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/ll_connect_msg"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_connect_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tv_connect_info"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_tcp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tv_tcp_connect_"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/tv_tcp_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/tv_tcp_connect" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_port"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tv_port_"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/tv_port_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/tv_port" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_client_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tv_client_id_"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/tv_client_id_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/tv_client_id" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:onClick="@{()->vm.viewHelpDoc()}"
+                android:id="@+id/rl_quest_1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/ll_connect_msg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:text="1. Lean about VCOM knx ?"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:onClick="@{()->vm.viewHelpDoc()}"
+                android:id="@+id/rl_quest_2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/rl_quest_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHeight_percent="0.1"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:text="2. The connection between the device ?"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:onClick="@{()->vm.viewLogout()}"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/selector_button_click">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Logout"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/red"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

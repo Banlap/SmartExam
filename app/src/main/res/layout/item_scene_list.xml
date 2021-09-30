@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_item"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/selector_button_click">
+
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/ll_scene"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_scene_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_scene"
+                    android:textSize="17dp"
+                    android:layout_weight="1"
+                    />
+
+                <LinearLayout
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/ll_config"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/selector_button_click">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_config"
+                        android:contentDescription="@string/tv_config"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_null"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/ll_delete"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_delete"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/selector_button_red"
+                android:text="delete"
+                android:textSize="17dp"
+                android:textColor="#ffffff" />
+
+            <View
+                android:layout_width="18dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

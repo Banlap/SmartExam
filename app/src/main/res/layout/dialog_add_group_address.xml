@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/tv_add_group_address"
+                android:textSize="20dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:paddingTop="15dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:id="@+id/ll_add_scene"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/et_main_group"
+                android:layout_weight="0.3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="2"
+                android:background="@drawable/shape_button_gray_f6"
+                />
+
+            <EditText
+                android:id="@+id/et_middle_ip"
+                android:layout_weight="0.3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:background="@drawable/shape_button_gray_f6"/>
+
+            <EditText
+                android:id="@+id/et_group_ip"
+                android:layout_weight="0.3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="3"
+                android:background="@drawable/shape_button_gray_f6"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv_confirm"
+                android:visibility="visible"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="170dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="@string/tv_confirm"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:background="@drawable/selector_button_green"/>
+
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv_cancel"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="170dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/tv_cancel"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/selector_button_gray"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
